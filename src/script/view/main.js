@@ -11,9 +11,11 @@ const main = function () {
     const renderResult = function (results) {
         clubListElement.innerHTML = "";
         results.forEach(function (club) {
-            const name = club.name;
-            const fanArt = club.fanArt;
-            const description = club.description;
+            // const name = club.name;
+            // const fanArt = club.fanArt;
+            // const description = club.description;
+
+            const {name,fanArt,description} = club;
 
             const clubElement = document.createElement("div");
             clubElement.setAttribute("class", "club");
@@ -33,8 +35,9 @@ const main = function () {
             </div>;`
             clubListElement.appendChild(clubElement);
         })
+
     };
-    
+
     const fallbackResult = function (message) {
         clubListElement.innerHTML = "";
         //ini yang lama
@@ -45,6 +48,3 @@ const main = function () {
 
     buttonSearchElement.addEventListener("click", onButtonSearchClicked);
 };
-
-
-                
