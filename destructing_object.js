@@ -21,10 +21,26 @@ const profile           =
 // console.log(firstName,lastName,age);
 
 //menggunakan inisialisasi nilai baru melalui object destruction
-let firstName               =   "Nico";
-let age                     =   21;
+// //namanya Destructuring Assignment
+// let firstName               =   "Nico";
+// let age                     =   21;
 
-({firstName, age}                   =   profile);
+// ({firstName, age}                   =   profile);
+
+//contoh lain untuk default values
+// const {firstName,lastName,isMale}       =   profile;
+
+// console.log(firstName);
+// // console.log(age);
+// console.log(lastName);
+// console.log(isMale);
+
+//isMale tidak ada karena tidak ada nilai yang diassign di situ
+
+//agar bisa muncul maka caranya dengan menambahkan value di setelah nama variabel
+
+const {firstName,lastName,isMale = false}   =   profile;
 
 console.log(firstName);
-console.log(age);
+console.log(lastName);
+console.log(isMale);
