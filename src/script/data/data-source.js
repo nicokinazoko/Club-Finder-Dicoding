@@ -1,3 +1,5 @@
+import clubs from './clubs.js';
+
 // function DataSource(onSuccess, onFailed) {
 //     this.onSuccess = onSuccess;
 //     this.onFailed = onFailed;
@@ -94,6 +96,8 @@ class DataSource {
         });
     }
 }
+
+export default DataSource;
 
 
                                         
